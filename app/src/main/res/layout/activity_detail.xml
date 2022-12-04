@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Review"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        android:id="@+id/cardview"
+        android:layout_below="@+id/toolbar"
+        app:cardCornerRadius="30dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@color/black"
+            android:id="@+id/img_truyen"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_name"
+        android:layout_marginTop="16dp"
+        android:text="Name"
+        android:layout_below="@+id/cardview"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="32dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_tac_gia"
+        android:layout_marginTop="16dp"
+        android:text="Tac gia"
+        android:layout_below="@id/tv_name"
+        android:textColor="#4F4F4F"
+        android:layout_marginHorizontal="32dp"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tv_tac_gia"
+        android:background="#ACACAC"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="32dp"/>
+
+    <TextView
+        android:layout_below="@id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:id="@+id/tv_mo_ta"
+        android:text="Mo ta"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="32dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_below="@id/tv_mo_ta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn2"
+        android:id="@+id/btn_doc"
+        android:text="Đọc ngay"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="46dp"
+        />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/btn_doc"
+        android:background="#ACACAC"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="32dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bình luận"
+        android:textColor="#059C41"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="32dp"
+        android:textSize="18sp"
+        android:id="@+id/tv_comment"
+        android:layout_below="@id/view2"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rcv_comment"
+        android:layout_below="@id/tv_comment"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/rcv_comment"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="32dp"/>
+
+    <LinearLayout
+        android:id="@+id/lin_layout"
+        android:layout_toRightOf="@+id/tv"
+        android:layout_below="@id/rcv_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/ed_mess"
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:layout_marginRight="10dp"
+            android:hint="Nhập bình luận..." />
+
+        <ImageView
+            android:id="@+id/img_send"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_baseline_send_24" />
+
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>
